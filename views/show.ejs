@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>tweet in detail</title>
+    <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+    <h1>Tweet's Detail</h1>
+    <p> Tweet ID : <%= tweet._id %></p>
+    <br>
+    <div class="tweet">
+        <h3 class="username"> Username : <%=tweet.username %> </h3><br>
+        <h4 class="post"> Tweet : <%= tweet.post %></h4>
+    </div>
+    <form method="post" action="/tweets/<%= tweet.id %>">
+        <button>Back</button>
+    </form>
+</body>
+</html>

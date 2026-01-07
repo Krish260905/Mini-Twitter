@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>All tweets</title>
+    <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+    <h1>Twitter</h1>
+    <% for(tweet of tweet) { %>
+        <div class ="tweet"> 
+            <h3 class="username"><b><%= tweet.username %></b></h3>
+            <h4 class="post"> tweet : <%=tweet.post %> </h4>
+            <br>
+            <a href="http://localhost:8080/tweets/<%=tweet._id%>">View in detail</a>
+            <a href="http://localhost:8080/tweets/<%=tweet._id%>/edit">Edit</a>
+            <form method="post" action="/tweets/<%=tweet._id%>?_method=DELETE">
+                <button>Delete</button>
+            </form>
+            <p> <%= tweet.created_at.toString().split(" ")[4] %></p>
+            <p> <%= tweet.created_at.toString().split(" ").slice(0,4).join("-") %></p>
+            <% if(tweet.updated_at){ %>
+            <p class="update1"> Updated at: <%= tweet.updated_at.toString().split(" ")[4] %></p>
+            <p class="update"> <%= tweet.updated_at.toString().split(" ").slice(0,4).join("-") %></p>
+            <% } %>
+        </div>
+    <% } %>
+
+    <br>
+    <br>
+    <a href="http://localhost:8080/tweets/new">Create New Tweet</a>
+</body>
+</html>

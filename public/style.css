@@ -1,0 +1,126 @@
+/* Reset & base styling */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+    background-color: #f5f8fa;
+    padding: 20px;
+}
+
+/* Page heading */
+h1 {
+    text-align: center;
+    color: #1da1f2;
+    margin-bottom: 30px;
+    font-size: 36px;
+}
+
+/* Tweet card */
+.tweet {
+    background-color: #ffffff;
+    width: 60%;
+    margin: 0 auto 20px auto;
+    padding: 15px 20px;
+    border-radius: 10px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+}
+
+/* Username */
+.username {
+    color: #14171a;
+    font-size: 18px;
+    margin-bottom: 8px;
+}
+
+/* Tweet text */
+.post {
+    color: #333;
+    font-size: 16px;
+    margin-bottom: 12px;
+}
+
+/* Links */
+a {
+    text-decoration: none;
+    color: #1da1f2;
+    margin-right: 15px;
+    font-weight: 500;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+/* Delete form */
+form {
+    display: inline;
+}
+
+/* Delete button */
+button {
+    background-color: #e0245e;
+    color: white;
+    border: none;
+    padding: 6px 12px;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 14px;
+}
+
+button:hover {
+    background-color: #c81e52;
+}
+
+/* Create new tweet link */
+body > a {
+    display: block;
+    width: fit-content;
+    margin: 30px auto;
+    padding: 10px 20px;
+    background-color: #1da1f2;
+    color: white;
+    border-radius: 20px;
+    font-weight: bold;
+}
+
+body > a:hover {
+    background-color: #0d8ddb;
+}
+
+.tweet {
+    position: relative;   /* required for absolute positioning inside */
+}
+
+.tweet p {
+    position: absolute;
+    right: 12px;
+    font-size: 12px;
+    color: #666;
+    margin: 0;
+}
+
+/* time (first p) */
+.tweet p:nth-of-type(1) {
+    top: 10px;
+}
+
+/* date (second p) */
+.tweet p:nth-of-type(2) {
+    top: 28px;
+}
+
+
+
+/* updated time styling */
+.update1 {
+    position: absolute;
+    bottom: 18px;
+    right: 12px;
+    font-size: 12px;
+    color: #657786;
+}
+
